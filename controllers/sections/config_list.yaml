@@ -1,0 +1,12 @@
+list: $/dipesh/blog/models/section/columns.yaml
+modelClass: Dipesh\Blog\Models\Section
+title: Sections
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'dipesh/blog/sections/update/:id'

@@ -1,0 +1,10 @@
+name: Hero
+modelClass: Dipesh\Blog\Models\Hero
+form: $/dipesh/blog/models/hero/fields.yaml
+defaultRedirect: 'dipesh/blog/hero/update/:id'
+create:
+    redirect: 'dipesh/blog/hero/update/:id'
+    redirectClose: dipesh/blog/hero
+update:
+    redirect: dipesh/blog/hero
+    redirectClose: dipesh/blog/hero

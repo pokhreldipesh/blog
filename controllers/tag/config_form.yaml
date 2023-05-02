@@ -1,0 +1,10 @@
+name: Tag
+form: $/dipesh/blog/models/tag/fields.yaml
+modelClass: Dipesh\Blog\Models\Tag
+defaultRedirect: dipesh/blog/tag
+create:
+    redirect: 'dipesh/blog/tag/update/:id'
+    redirectClose: dipesh/blog/tag
+update:
+    redirect: dipesh/blog/tag
+    redirectClose: dipesh/blog/tag

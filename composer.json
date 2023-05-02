@@ -1,0 +1,10 @@
+{
+    "name": "dipesh/blog",
+    "type": "winter-plugin",
+    "description": "Winter CMS blog plugin",
+    "keywords": ["winter", "cms", "blog", "plugin"],
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "~1.0"
+    }
+}

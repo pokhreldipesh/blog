@@ -1,0 +1,9 @@
+tags:
+    label: Tag
+    view:
+        list: $/dipesh/blog/models/tag/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        list: $/dipesh/blog/models/tag/columns.yaml
+        form: $/dipesh/blog/models/tag/fields.yaml
+        recordsPerPage: 10

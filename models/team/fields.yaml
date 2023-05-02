@@ -1,0 +1,21 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    image:
+        label: Image
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        span: auto
+        type: mediafinder
+    position:
+        label: Position
+        span: full
+        type: text
+    content:
+        label: Content
+        size: large
+        span: full
+        type: richeditor

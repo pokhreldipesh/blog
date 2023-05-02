@@ -1,0 +1,10 @@
+name: Sections
+form: $/dipesh/blog/models/section/fields.yaml
+modelClass: Dipesh\Blog\Models\Section
+defaultRedirect: dipesh/blog/sections
+create:
+    redirect: 'dipesh/blog/sections/update/:id'
+    redirectClose: dipesh/blog/sections
+update:
+    redirect: dipesh/blog/sections
+    redirectClose: dipesh/blog/sections

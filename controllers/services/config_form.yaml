@@ -1,0 +1,10 @@
+name: Services
+form: $/dipesh/blog/models/service/fields.yaml
+modelClass: Dipesh\Blog\Models\Service
+defaultRedirect: dipesh/blog/services
+create:
+    redirect: 'dipesh/blog/services/update/:id'
+    redirectClose: dipesh/blog/services
+update:
+    redirect: dipesh/blog/services
+    redirectClose: dipesh/blog/services

@@ -1,0 +1,10 @@
+name: Posts
+form: $/dipesh/blog/models/post/fields.yaml
+modelClass: Dipesh\Blog\Models\Post
+defaultRedirect: dipesh/blog/posts
+create:
+    redirect: 'dipesh/blog/posts/update/:id'
+    redirectClose: dipesh/blog/posts
+update:
+    redirect: dipesh/blog/posts
+    redirectClose: dipesh/blog/posts

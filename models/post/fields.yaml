@@ -1,0 +1,40 @@
+fields:
+    published:
+        label: 'Published ?'
+        span: auto
+        type: switch
+    created_at:
+        label: 'Publish Date'
+        mode: date
+        span: auto
+        required: 1
+        type: datepicker
+    title:
+        label: Title
+        span: auto
+        type: text
+    feature:
+        label: Image
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    summary:
+        label: Summary
+        size: small
+        span: full
+        type: textarea
+    content:
+        label: Description
+        size: giant
+        span: full
+        type: richeditor
+    tags:
+        label: Tags
+        nameFrom: title
+        descriptionFrom: description
+        span: full
+        type: relation

@@ -1,0 +1,24 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    feature:
+        label: Image
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    summary:
+        label: Summary
+        size: small
+        span: full
+        type: textarea
+    content:
+        label: Content
+        size: large
+        span: full
+        type: richeditor

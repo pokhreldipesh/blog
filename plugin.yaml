@@ -1,0 +1,36 @@
+plugin:
+    name: 'dipesh.blog::lang.plugin.name'
+    description: 'dipesh.blog::lang.plugin.description'
+    author: dipesh
+    icon: wn-icon-book
+    replaces: {  }
+navigation:
+    main-menu-item:
+        label: 'dipesh.blog::lang.plugin.name'
+        url: dipesh/blog/posts
+        icon: icon-life-ring
+        sideMenu:
+            blog-posts:
+                label: Posts
+                url: /dipesh/blog/posts
+                icon: icon-sitemap
+            hero-sections:
+                label: 'Hero Sections'
+                url: dipesh/blog/hero/create
+                icon: icon-simplybuilt
+            tags:
+                label: Tags
+                url: dipesh/blog/tag
+                icon: icon-sitemap
+            blog-services:
+                label: Services
+                url: /dipesh/blog/services
+                icon: icon-sitemap
+            blog-teams:
+                label: Teams
+                url: dipesh/blog/teams
+                icon: icon-sitemap
+            blog-sections:
+                label: Sections
+                url: /dipesh/blog/sections
+                icon: icon-sitemap

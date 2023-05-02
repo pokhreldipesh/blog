@@ -1,0 +1,10 @@
+name: Teams
+form: $/dipesh/blog/models/team/fields.yaml
+modelClass: Dipesh\Blog\Models\Team
+defaultRedirect: dipesh/blog/teams
+create:
+    redirect: 'dipesh/blog/teams/update/:id'
+    redirectClose: dipesh/blog/teams
+update:
+    redirect: dipesh/blog/teams
+    redirectClose: dipesh/blog/teams

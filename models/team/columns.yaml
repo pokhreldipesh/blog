@@ -1,0 +1,22 @@
+columns:
+    id:
+        label: id
+        type: number
+    title:
+        label: title
+        type: text
+    content:
+        label: content
+        type: text
+    position:
+        label: position
+        type: text
+    image:
+        label: image
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime

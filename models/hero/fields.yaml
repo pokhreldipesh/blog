@@ -1,0 +1,19 @@
+fields:
+    title:
+        label: Title
+        span: full
+        type: text
+    description:
+        label: Description
+        size: small
+        span: full
+        type: textarea
+    feature:
+        label: Image
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
