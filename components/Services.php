@@ -10,12 +10,17 @@ class Services extends \Cms\Classes\ComponentBase
     {
         return [
             'name' => 'Services',
-            'description' => 'Displays available services: .get()',
+            'description' => 'Displays available services: .get(), .bySlug()',
         ];
     }
 
     public function get()
     {
         return Service::with('feature')->get();
+    }
+
+    public function bySlug() 
+    {
+        return Service::with('feature')->where('title', $this->param('slug'))->first();
     }
 }
