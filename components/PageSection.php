@@ -29,11 +29,11 @@ class PageSection extends \Cms\Classes\ComponentBase
 
     public function getSectionOptions()
     {
-        return Section::orderBy('title')->lists('title');
+        return Section::orderBy('title')->lists('title', 'id');
     }
 
     public function get()
     {
-        return Section::with('feature')->where('title', $this->property('section'))->first();
+        return Section::with('feature')->where('id', $this->property('section'))->first();
     }
 }
