@@ -1,23 +1,25 @@
 1.0.1:
-    - 'Initialize plugin.'
+  - "Initialize plugin."
 1.0.2:
-    - 'Created table dipesh_blog_posts'
-    - builder_table_create_dipesh_blog_posts.php
+  - "Created table dipesh_blog_posts"
+  - builder_table_create_dipesh_blog_posts.php
 1.0.3:
-    - 'Created table dipesh_blog_tags'
-    - builder_table_create_dipesh_blog_tags.php
+  - "Created table dipesh_blog_tags"
+  - builder_table_create_dipesh_blog_tags.php
 1.0.4:
-    - 'Updated table dipesh_blog_post_tag'
-    - builder_table_create_dipesh_blog_post_tag.php
+  - "Updated table dipesh_blog_post_tag"
+  - builder_table_create_dipesh_blog_post_tag.php
 1.0.5:
-    - 'Created table dipesh_blog_hero'
-    - builder_table_create_dipesh_blog_hero.php
+  - "Created table dipesh_blog_hero"
+  - builder_table_create_dipesh_blog_hero.php
 1.0.6:
-    - 'Created table dipesh_blog_services'
-    - builder_table_create_dipesh_blog_services.php
+  - "Created table dipesh_blog_services"
+  - builder_table_create_dipesh_blog_services.php
 1.0.7:
-    - 'Created table dipesh_blog_teams'
-    - builder_table_create_dipesh_blog_teams.php
+  - "Created table dipesh_blog_teams"
+  - builder_table_create_dipesh_blog_teams.php
 1.0.8:
-    - 'Created table dipesh_blog_sections'
-    - builder_table_create_dipesh_blog_sections.php
+  - "Created table dipesh_blog_sections"
+  - builder_table_create_dipesh_blog_sections.php
+1.0.9:
+  - "add services component to plugin"
