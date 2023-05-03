@@ -1,4 +1,6 @@
-<?php namespace Dipesh\Blog;
+<?php
+
+namespace Dipesh\Blog;
 
 use System\Classes\PluginBase;
 
@@ -10,11 +12,10 @@ class Plugin extends PluginBase
             'Dipesh\Blog\Components\Posts' => 'blogPost',
             'Dipesh\Blog\Components\HeroSection' => 'heroSection',
             'Dipesh\Blog\Components\MyTeams' => 'myTeams',
-            'Dipesh\Blog\Components\PageSection' => 'pageSection'
-
+            'Dipesh\Blog\Components\PageSection' => 'pageSection',
+            'Dipesh\Blog\Components\Services' => 'services',
         ];
     }
-
 
     public function registerSettings()
     {
