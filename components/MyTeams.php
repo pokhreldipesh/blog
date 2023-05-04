@@ -17,6 +17,6 @@ class MyTeams extends \Cms\Classes\ComponentBase
 
     public function get()
     {
-        return Team::with('image')->get();
+        return Team::get();
     }
 }
