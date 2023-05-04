@@ -17,6 +17,6 @@ class MyTeams extends \Cms\Classes\ComponentBase
 
     public function get()
     {
-        return Team::get();
+        return Team::orderBy('sort_order', 'asc')->get();
     }
 }

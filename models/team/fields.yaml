@@ -19,3 +19,17 @@ fields:
         size: large
         span: full
         type: richeditor
+    extra:
+        label: 'Extra information'
+        prompt: 'Add new item'
+        style: default
+        span: auto
+        type: repeater
+        form:
+            fields:
+                title:
+                    label: Title
+                    type: text
+                value:
+                    label: Value
+                    type: text

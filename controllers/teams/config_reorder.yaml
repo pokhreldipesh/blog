@@ -1,0 +1,12 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: Reorder
+
+# Attribute name
+nameFrom: title
+
+# Model Class name
+modelClass: Dipesh\Blog\Models\Team
