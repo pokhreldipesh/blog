@@ -1,0 +1,39 @@
+title:
+    label: Title
+    span: auto
+    type: text
+feature:
+    label: Image
+    mode: file
+    useCaption: true
+    thumbOptions:
+        mode: crop
+        extension: auto
+    span: auto
+    type: fileupload
+summary:
+    label: Summary
+    size: small
+    span: full
+    type: textarea
+content:
+    label: Content
+    size: large
+    span: full
+    type: richeditor
+extra:
+    label: 'Extra Fields'
+    prompt: 'Add new item'
+    style: default
+    span: auto
+    type: repeater
+    form:
+        fields:
+            title:
+                label: Title
+                span: auto
+                type: text
+            value:
+                label: Value
+                span: auto
+                type: text

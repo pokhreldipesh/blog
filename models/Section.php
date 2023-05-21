@@ -26,12 +26,15 @@ class Section extends Model
     
     protected $slugs = ['slug' => 'title'];
 
+    
+
     /**
      * @var array Attribute names to encode and decode using JSON.
      */
-    public $jsonable = [];
+    public $jsonable = ['extra', 'children'];
 
     public $attachOne = [
         'feature' => 'System\Models\File'
     ];
+
 }

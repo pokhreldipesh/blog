@@ -3,6 +3,7 @@
 namespace Dipesh\Blog;
 
 use System\Classes\PluginBase;
+use Dipesh\Blog\Models\Section;
 
 class Plugin extends PluginBase
 {
@@ -16,7 +17,14 @@ class Plugin extends PluginBase
             'Dipesh\Blog\Components\Services' => 'services',
         ];
     }
-
+    public function boot()
+    {
+        Section::extend(function($model) {
+            $model->bindEvent('model.afterFetch', function() use ($model) {
+                //dd($model->children);
+            });
+        });
+    }
     public function registerSettings()
     {
     }

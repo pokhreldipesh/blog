@@ -37,4 +37,5 @@ fields:
         nameFrom: title
         descriptionFrom: description
         span: full
-        type: relation
+        type: taglist
+        mode: relation

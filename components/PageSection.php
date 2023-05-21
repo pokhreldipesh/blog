@@ -4,7 +4,7 @@ namespace Dipesh\Blog\Components;
 
 use Dipesh\Blog\Models\Section;
 use Illuminate\Pagination\LengthAwarePaginator;
-
+use Illuminate\Http\Request;
 
 class PageSection extends \Cms\Classes\ComponentBase
 {
@@ -20,8 +20,14 @@ class PageSection extends \Cms\Classes\ComponentBase
     {
         return [
             'section' => [
-                'title' => 'Select Section',
+                'title' => 'Section',
                 'type' => 'dropdown',
+                'default' => ''
+            ],
+            'subSection' => [
+                'title' => 'Sub Section',
+                'type' => 'dropdown',
+                'depends'     => ['section'],
                 'default' => ''
             ]
         ];
@@ -29,11 +35,41 @@ class PageSection extends \Cms\Classes\ComponentBase
 
     public function getSectionOptions()
     {
-        return Section::orderBy('title')->lists('title', 'id');
+        $list = Section::orderBy('title')->lists('title', 'id');
+
+        return ['' => 'Select Section']+ $list;
+    }
+
+    public function getSubSectionOptions()
+    {
+        $section = request()->input('section');
+
+        
+        if(empty($section)) {
+            
+            return [];
+        }
+
+        $section = Section::orderBy('title')
+        ->where('id', (int)$section)
+        ->first()->children;
+
+
+        return collect($section)->map(function($val, $index) {
+                return $val['title'];
+            })->prepend("Select Sub Section")->toArray();
     }
 
     public function get()
     {
-        return Section::with('feature')->where('id', $this->property('section'))->first();
+        $section =  Section::with('feature')
+        ->where('id', $this->property('section'))
+        ->first();
+        
+        if ($subSection = (int)$this->property('subSection')) {
+            return (new Section())->forceFill($section->children[(int)$subSection - 1]);
+        }
+
+        return $section;
     }
 }

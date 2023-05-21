@@ -1,24 +1,99 @@
-fields:
-    title:
-        label: Title
-        span: auto
-        type: text
-    feature:
-        label: Image
-        mode: file
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
-    summary:
-        label: Summary
-        size: small
-        span: full
-        type: textarea
-    content:
-        label: Content
-        size: large
-        span: full
-        type: richeditor
+tabs:
+    stretch: true
+    defaultTab: Section
+    cssClass: text-blue
+    lazy:
+        - sub-section
+    paneCssClass:
+        0: first-tab
+        1: second-tab
+    icons:
+        User: icon-user
+        Groups: icon-group
+    fields:
+        title:
+            label: Title
+            span: auto
+            type: text
+        feature:
+            label: Image
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+        summary:
+            label: Summary
+            size: small
+            span: full
+            type: textarea
+        content:
+            label: Content
+            size: large
+            span: full
+            type: richeditor
+        extra:
+            label: 'Extra Fields'
+            prompt: 'Add new item'
+            style: default
+            span: auto
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        span: auto
+                        type: text
+                    value:
+                        label: Value
+                        span: auto
+                        type: text
+        children:
+            label: 'Child Section'
+            prompt: 'Add new child section'
+            style: collapsed
+            span: full
+            type: repeater
+            tab: Sub Section
+            form:
+                fields:
+                    title:
+                        label: Title
+                        span: auto
+                        type: text
+                    image:
+                        label: Image
+                        mode: image
+                        imageWidth: '100'
+                        imageHeight: '100'
+                        span: auto
+                        type: mediafinder
+                    summary:
+                        label: Summary
+                        size: small
+                        span: full
+                        type: textarea
+                    content:
+                        label: Content
+                        size: large
+                        span: full
+                        type: richeditor
+                    extra:
+                        label: 'Extra Fields'
+                        prompt: 'Add new item'
+                        style: default
+                        span: auto
+                        type: repeater
+                        form:
+                            fields:
+                                title:
+                                    label: Title
+                                    span: auto
+                                    type: text
+                                value:
+                                    label: Value
+                                    span: auto
+                                    type: text
+     
