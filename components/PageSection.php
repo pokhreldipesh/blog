@@ -12,7 +12,7 @@ class PageSection extends \Cms\Classes\ComponentBase
     {
         return [
             'name' => 'Page Section',
-            'description' => 'Displays a page section. available methods: .get()'
+            'description' => 'Displays a page section. available methods: .get(), .bySlug'
         ];
     }
 
@@ -71,5 +71,10 @@ class PageSection extends \Cms\Classes\ComponentBase
         }
 
         return $section;
+    }
+
+    public function bySlug() 
+    {
+        return Section::with('feature')->where('title', $this->param('slug'))->first();
     }
 }
