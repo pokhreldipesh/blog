@@ -11,12 +11,17 @@ class MyTeams extends \Cms\Classes\ComponentBase
     {
         return [
             'name' => 'My Teams',
-            'description' => 'Displays a my teams. available methods are: .get()'
+            'description' => 'Displays a my teams. available methods are: .get(), bySlug()'
         ];
     }
 
     public function get()
     {
         return Team::orderBy('sort_order', 'asc')->get();
+    }
+
+    public function bySlug()
+    {
+        return Team::with('feature')->where('title', $this->param('slug'))->first();
     }
 }

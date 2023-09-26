@@ -37,4 +37,5 @@
     - builder_table_update_dipesh_blog_sections_1.php
 1.0.14:
     - 'page section get by slug'
-    
+1.0.15:
+    - 'team section get by slug'
