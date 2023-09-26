@@ -22,6 +22,6 @@ class MyTeams extends \Cms\Classes\ComponentBase
 
     public function bySlug()
     {
-        return Team::with('feature')->where('title', $this->param('slug'))->first();
+        return Team::where('title', $this->param('slug'))->first();
     }
 }

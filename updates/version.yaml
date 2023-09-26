@@ -39,3 +39,5 @@
     - 'page section get by slug'
 1.0.15:
     - 'team section get by slug'
+1.0.16:
+    - 'bug fixes'
