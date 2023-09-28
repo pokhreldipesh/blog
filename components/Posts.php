@@ -15,7 +15,7 @@ class Posts extends \Cms\Classes\ComponentBase
     {
         return [
             'name' => 'Blog Posts',
-            'description' => 'Displays a collection of blog posts. Available methods are : .posts(), .post()'
+            'description' => 'Displays a collection of blog posts. Available methods are : .posts(), .post(), byId(), byTag()'
         ];
     }
 
@@ -58,6 +58,16 @@ class Posts extends \Cms\Classes\ComponentBase
 
     public function post() {
 
-        return Post::where('title', $this->param('slug'))->first();
+        return Post::with('feature')->where('title', $this->param('slug'))->first();
+    }
+
+    public function byId() {
+
+        return Post::with('feature')->where('title', $this->param('id'))->first();
+    }
+
+    public function byTag() {
+
+        return Post::with('feature')->where('title', $this->param('tag'))->get();
     }
 }

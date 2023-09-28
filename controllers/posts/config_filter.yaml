@@ -1,0 +1,12 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    tags:
+        label: Tags
+        type: group
+        modelClass: Dipesh\Blog\Models\Tag
+        nameFrom: title
+        scope: applyTags

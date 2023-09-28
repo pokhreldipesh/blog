@@ -44,4 +44,11 @@ class Post extends Model
             'otherKey' => 'tag_id'
         ],
     ];
+
+    public function scopeApplyTags($query, $type)
+    {
+        return $query
+                    ->leftJoin('dipesh_blog_post_tag', 'dipesh_blog_posts.id', '=', 'dipesh_blog_post_tag.post_id')
+                    ->whereIn('tag_id', $type);
+    }
 }

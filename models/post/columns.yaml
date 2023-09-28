@@ -5,9 +5,16 @@ columns:
     title:
         label: title
         type: text
+        searchable: true
     summary:
         label: summary
         type: text
+        searchable: true
+    tags:
+        label: Tags
+        relation: tags
+        select: title
+        searchable: true
     created_at:
         label: created_at
         type: datetime
