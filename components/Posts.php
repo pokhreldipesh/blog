@@ -63,11 +63,17 @@ class Posts extends \Cms\Classes\ComponentBase
 
     public function byId() {
 
-        return Post::with('feature')->where('title', $this->param('id'))->first();
+        return Post::with('feature')->with('tags')->where('id', $this->param('id'))->first();
     }
 
     public function byTag() {
-
-        return Post::with('feature')->where('title', $this->param('tag'))->get();
+        return Post::query()
+        ->with('feature')
+        ->with('tags')
+        ->where('published', $this->property('published'))
+        ->orderBy(DB::raw('date(created_at)'), 'desc')
+        ->join('dipesh_blog_post_tag', 'dipesh_blog_posts.id', '=', 'dipesh_blog_post_tag.post_id')
+        ->join('dipesh_blog_tags', 'dipesh_blog_post_tag.tag_id', '=', 'dipesh_blog_tags.id')
+        ->where('dipesh_blog_tags.slug', $this->param('tag'))->get();
     }
 }

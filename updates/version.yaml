@@ -43,3 +43,6 @@
     - 'bug fixes'
 1.0.17:
     - 'filter post by tags and added component methods'
+1.0.18:
+    - 'Updated table dipesh_blog_tags add slug column'
+    - builder_table_update_tags_add_slug_column.php

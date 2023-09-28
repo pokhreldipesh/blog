@@ -27,6 +27,19 @@ class Tag extends Model
      */
     public $jsonable = [];
 
+    public static function boot()
+    {
+        parent::boot();
+
+        self::creating(function($model){
+            $model->slug = str_slug($model->title, '-');
+        });
+
+        self::updating(function($model){
+            $model->slug = str_slug($model->title, '-');
+        });
+    }
+
     public $belongsToMany = [
         'blogs' => [
             \Dipesh\Blog\Models\Post::class , 
