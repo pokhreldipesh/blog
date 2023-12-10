@@ -67,7 +67,7 @@ class Posts extends \Cms\Classes\ComponentBase
     }
 
     public function byTag() {
-        return Post::query()
+        return Post::query()->select('dipesh_blog_posts.*')
         ->with('feature')
         ->with('tags')
         ->where('published', $this->property('published'))
