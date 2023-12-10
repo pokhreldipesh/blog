@@ -48,3 +48,5 @@
     - builder_table_update_tags_add_slug_column.php
 1.0.19:
     - 'bug fixes'
+1.0.20:
+    - 'bug fixes'
